@@ -1,0 +1,71 @@
+import random
+dict=["s","w","g"]
+
+chance=10
+no_of_chances=0
+computer_point=0
+human_point=0
+
+print("snake gun water game")
+
+while no_of_chances<chance:
+    inp1=input("snake,water,gun: ")
+    inp2=random.choice(dict)
+
+    if  inp1==inp2:
+        print("tie both got 0 points")
+
+    if inp1=="s"and inp2=="w":
+        human_point=human_point+1
+        print(f"your guess {inp1} and computer guess is{inp2}")
+        print(f"computer point is{computer_point} and your point is {human_point}")
+        print("you win one point")
+
+    elif inp1=="s"and inp2=="g":
+        computer_point=computer_point+1
+        print(f"your guess {inp1} and computer guess is{inp2}")
+        print(f"computer point is{computer_point} and your point is {human_point}")
+        print("computer wins one point")
+
+    elif inp1=="w"and inp2=="s":
+        computer_point=computer_point+1
+        print(f"your guess {inp1} and computer guess is{inp2}")
+        print(f"computer point is{computer_point} and your point is {human_point}")
+        print("computer win one point")
+
+    elif inp1=="w"and inp2=="g":
+        human_point=human_point+1
+        print(f"your guess {inp1} and computer guess is{inp2}")
+        print(f"computer point is{computer_point} and your point is {human_point}")
+        print("you win one point")
+
+    elif inp1=="g"and inp2=="w":
+        computer_point=computer_point+1
+        print(f"your guess {inp1} and computer guess is{inp2}")
+        print(f"computer point is{computer_point} and your point is {human_point}")
+        print("computer wins one point")
+
+    elif inp1=="g"and inp2=="s":
+        human_point=human_point+1
+        print(f"your guess {inp1} and computer guess is{inp2}")
+        print(f"computer point is{computer_point} and your point is {human_point}")
+        print("you win one point")
+
+    else:
+        print("enter some valid input")
+
+        no_of_chances=no_of_chances+1
+        print(f"show that{no_of_chances}left out of {chance}")
+
+    if human_point<computer_point:
+        print("computer is winner")
+
+    elif computer_point<human_point:
+        print("you are the winner")
+
+    print(f"computer point are {computer_point} and your points are {human_point}")
+
+
+
+
+
